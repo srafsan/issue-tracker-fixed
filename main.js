@@ -12,7 +12,6 @@ function submitIssue(e) {
 
     const issue = { id, description, severity, assignedTo, status };
     let issues = [];
-    main.js;
     if (localStorage.getItem("issues")) {
         issues = JSON.parse(localStorage.getItem("issues"));
     }
@@ -43,7 +42,7 @@ const fetchIssues = () => {
     const issuesList = document.getElementById("issuesList");
     issuesList.innerHTML = "";
 
-    for (var i = 0; i < issues.length; i++) {
+    for (var i = 0; i < issues?.length; i++) {
         const { id, description, severity, assignedTo, status } = issues[i];
 
         issuesList.innerHTML += `<div class="well">
